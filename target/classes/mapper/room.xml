@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.sist.model.RoomDAO">
+
+
+	<insert id="addRoom" parameterType="com.sist.model.RoomDTO">
+		insert into d_room
+		values(d_room_seq.nextval, #{r_btype,jdbcType=VARCHAR},
+		#{r_type,jdbcType=VARCHAR}, #{r_address,jdbcType=VARCHAR},
+		#{r_rentfee,jdbcType=VARCHAR}, #{r_deposit,jdbcType=VARCHAR},
+		#{r_dimension,jdbcType=VARCHAR},
+		#{r_floor,jdbcType=VARCHAR},#{r_heating,jdbcType=VARCHAR},#{r_movedate,jdbcType=VARCHAR},
+		#{r_utility,jdbcType=VARCHAR}, #{r_detail,jdbcType=VARCHAR},
+		#{r_meal,jdbcType=VARCHAR},
+		#{r_gender,jdbcType=VARCHAR},
+		#{r_person,jdbcType=VARCHAR}, #{r_shareutility,jdbcType=VARCHAR},
+		#{r_ritire,jdbcType=VARCHAR}, #{r_location1,jdbcType=VARCHAR},
+		#{r_location2,jdbcType=VARCHAR}, #{ r_photo,jdbcType=VARCHAR},
+		#{r_monthlimit,jdbcType=VARCHAR}, #{m_no,jdbcType=VARCHAR})
+	</insert>
+
+	<select id="roomNum" resultType="int">
+		select max(r_no) from d_room
+
+	</select>
+	<insert id="addRoomOption"
+		parameterType="com.sist.model.RoomOptionDTO">
+		insert into d_option values(#{r_no}, #{o_tv,jdbcType=VARCHAR},
+		#{o_desk,jdbcType=VARCHAR}, #{o_bed,jdbcType=VARCHAR},
+		#{o_stove,jdbcType=VARCHAR},
+		#{o_closet,jdbcType=VARCHAR}, #{o_ac,jdbcType=VARCHAR},
+		#{o_micro,jdbcType=VARCHAR},#{o_laundry,jdbcType=VARCHAR},#{o_refri,jdbcType=VARCHAR},#{o_parking,jdbcType=VARCHAR},
+		#{o_elevator,jdbcType=VARCHAR},#{o_balcony,jdbcType=VARCHAR},
+		#{o_pet,jdbcType=VARCHAR}, #{ou_net,jdbcType=VARCHAR},
+		#{ou_tv,jdbcType=VARCHAR}, #{ou_clean,jdbcType=VARCHAR},
+		#{ou_gas,jdbcType=VARCHAR}, #{ou_electric,jdbcType=VARCHAR},
+		#{ou_water,jdbcType=VARCHAR})
+	</insert>
+
+	<select id="roomList" resultType="com.sist.model.RoomTotalDTO">
+		select d_room.*, d_option.* from d_room inner join d_option on
+		d_room.r_no = d_option.r_no order by d_room.r_no desc
+		<!-- SELECT ADDR.*, MOBILE.MOBILE_NO FROM ADDR INNER JOIN MOBILE ON ADDR.CUST_ID 
+			= MOBILE.CUST_ID; -->
+	</select>
+
+	<select id="roomCont" parameterType="int"
+		resultType="com.sist.model.RoomTotalDTO">
+		select d_room.*, d_option.*
+		from d_room inner join d_option on d_room.r_no = d_option.r_no
+		where d_room.r_no = #{r_no}
+	</select>
+
+	<select id="likeView"
+		parameterType="com.sist.model.RoomTotalDTO" resultType="Boolean">
+		select count(*)
+		from d_like
+	 <![CDATA[
+	 where m_no = #{m_no} and r_no = #{r_no}
+	 ]]>
+	</select>
+	
+	<insert id="likeOn" parameterType="com.sist.model.RoomTotalDTO">
+		insert into d_like
+		values(#{m_no,jdbcType=VARCHAR},#{r_no,jdbcType=VARCHAR},1)
+	</insert>
+
+	<delete id="likeOff" parameterType="com.sist.model.RoomTotalDTO">
+		delete from d_like 
+	 <![CDATA[
+	 where m_no = #{m_no} and r_no = #{r_no} ]]>
+	</delete>
+
+	<select id="searchAddress"
+		resultType="com.sist.model.RoomTotalDTO">
+		select * from d_room 
+   <![CDATA[
+    WHERE r_btype = '단기임대' AND r_address like '%' ||  #{searchAddress} || '%' ]]>
+	</select>
+	
+	<select id="roomLikeAll" parameterType="int" resultType="com.sist.model.RoomTotalDTO">
+	<!-- select d_room.*
+	from d_room inner join d_member on d_room.m_no = d_member.m_no inner join d_like on d_like.r_no = d_room.r_no
+	where d_like.m_no = #{m_no} -->
+	
+	select d_room.*
+	from d_like inner join d_member on d_like.m_no = d_member.m_no inner join d_room on d_like.r_no = d_room.r_no
+	where d_like.m_no = #{m_no}
+	</select>
+</mapper>

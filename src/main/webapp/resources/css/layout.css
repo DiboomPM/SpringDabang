@@ -1,0 +1,89 @@
+.header_wrap{max-width: 1000px;}
+
+/*header*/
+#header{background: #ffd800; }
+#header.white {background: #fff;}
+#header.underline {border-bottom: 2px solid #000;}
+#header h1{float: left; margin-top: 7px; margin-bottom: 0px; font-size: unset !important;}
+#gnb{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%)}
+#gnb li{float: left;}
+#gnb li a{font-size: 17px; color: #726c5c; font-family: "NanumSquare"; font-weight: bold; padding: 0 15px;}
+.util{float: right; margin-top: 16px;}
+.util li{float: left; padding: 0 20px;}
+.util li img{vertical-align: bottom;}
+
+/*sub °øÅë*/
+.sub_top{height: 155px; margin-bottom: 54px; overflow: hidden;}
+.sub_top .title{margin-top: 45px; font-size: 36px; color: black; text-align: center; letter-spacing: 0.04em; display: block; text-align: center; margin-bottom: 10px;}
+.sub_top div{text-align: center;}
+.sub_top div span{display: inline-block; color: #3d3d3d; font-size: 18px; font-weight: bold;}
+
+/*goungyu*/
+.sub_top.top4{background: url(../images/sub/sub4_top.jpg) no-repeat center center; background-size:cover;}
+
+.footer {
+    padding: 15px 0;
+    background-color: #f4f4f4;
+}
+.footer .is-area-top,
+.footer .is-area-mid,
+.footer .is-area-bot {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.footer .is-area-top li {
+    display: inline-block;
+    margin-right: -4.5px;
+}
+.footer .is-area-top li>a {
+    position: relative;
+    display: block;
+    padding: 0 15px;
+    font-size: 13px;
+    color: #333;
+}
+.footer .is-area-top li>a:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+}
+.footer .is-area-top li:last-child>a:after {
+    display: none;
+}
+.footer .is-area-mid p {
+    font-size: 13px;
+    line-height: 1.9;
+}
+.footer .is-area-mid p span {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .is-area-mid p span:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+}
+.footer .is-area-mid p span:last-child:after {
+    display: none;
+}
+.footer .is-area-bot .is-copyright {
+    font-size: 13px;
+}
+
+.tab_menu{border-bottom: 1px solid #dfdfdf; text-align: center;}
+.tab_menu li{display: inline-block; position: relative}
+.tab_menu li a{box-sizing: border-box; display: block; padding: 10px 0; margin: 0 40px; color: black; font-size: 18px; font-weight: bold; position: relative; min-width:140px;}
+.tab_menu li.on a::after{content: ""; display: block; width: 120%; height: 5px; background: #cacac5; position: absolute; bottom: 0; left: -10%;}
+
+.tab_content{padding-top: 60px;}

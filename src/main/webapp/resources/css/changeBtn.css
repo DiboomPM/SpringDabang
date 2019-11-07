@@ -1,0 +1,25 @@
+/* #btnLike{
+	background:url("../../resources/images/empty_heart.png") no-repeat;
+	border:none;
+	width:20px;
+	height:20px;
+	background-size:contain;
+} */
+
+body{
+	text-align:center;
+}
+
+#btnList, #btnListView{
+	background-color:white;
+	color:#8ebebc;
+	border-radius:5px;
+	border: 1px solid #8ebebc;
+	outline:0;
+	padding:5px;
+}
+
+#memberList{
+	padding-left:45%;
+	padding-right:50%;
+}

@@ -1,0 +1,256 @@
+body {
+    font-family: 'NanumSquare', sans-serif;
+}
+
+.is-frame-md {
+    min-width: 1000px;
+}
+
+header .nav {
+    padding: 15px 0;
+}
+
+header .nav ul li {
+    display: inline-block;
+    margin-left: 49px;
+}
+
+header .nav ul li:first-child {
+    margin-left: 0;
+}
+
+header .nav ul li a {
+    color: #c1a868;
+    font-weight: bold;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+header .nav span,
+header .nav .member-info a {
+    font-size: 15px;
+}
+
+header .nav .member-info {
+    line-height: 43px;
+}
+
+header .nav .reset {
+    margin-left: 70px;
+    font-size: 15px;
+}
+
+header .nav .mypage {
+    margin-left: 40px;
+}
+
+.yellow-bg {
+    background-color: #ffd800;
+    height: 60px;
+    border-bottom: 2px solid #000;
+}
+
+.section1 {
+    margin-bottom: 200px;
+}
+
+.section1 .tit-box h2 {
+    font-size: 22px;
+    padding-bottom: 15px;
+    color: #af8e27;
+    border-bottom: 2px solid #af8e27;
+    margin-top: 50px;
+}
+
+.section1 .section1-contents-wrap {
+    margin: 100px 0;
+}
+
+.section1 h3 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #6e6e6e;
+    margin-bottom: 30px;
+}
+
+.section1 ul li {
+    color: #3f3e3e;
+    white-space: pre-line;
+    font-size: 14px;
+}
+
+.section1 ul li span {
+    font-size: 16px;
+    background-color: #ffeeb1;
+}
+
+.section2 .section2-title {
+    background-color: #ece6da;
+    padding: 70px 0;
+}
+
+.section2 .section2-title h2 {
+    color: #060606;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 36px;
+    vertical-align: -10px;
+}
+
+.section2 ul li span {
+    position: relative;
+    color: #060606;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.section2 ul li span>i {
+    position: absolute;
+    left: 5px;
+    bottom: -10px;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.section2 ul li {
+    color: #000;
+    white-space: pre-line;
+    font-size: 17px;
+}
+
+.section2 ul li:first-child {
+    border-bottom: 5px solid #6F6F6F;
+}
+.section2 ul li.left-padding {
+    padding-left: 20px;
+}
+
+.section2 .section2-contents-wrap {
+    margin-top: 70px;
+}
+
+.section2 .section2-contents {
+    margin-bottom: 10px;
+    margin-top:100px;
+}
+
+#loginModal [data-uc-panel],
+#joinModal [data-uc-panel] {
+    border-color: #7c7b7b;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+#loginModal [data-uc-panel] [class*=is-panel-],
+#joinModal [data-uc-panel] [class*=is-panel-] {
+    padding: 40px 80px;
+
+}
+
+#loginModal[data-uc-modal] .is-modal-dialog {
+    position: absolute;
+    max-width: 780px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    margin-left: -380px;
+    margin-top: -170px;
+}
+
+#joinModal[data-uc-modal] .is-modal-dialog {
+    max-width: 730px;
+}
+
+.sns-wrap p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.sns-wrap a {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.is-btn-yg1 {
+    display: block;
+    width: 100%;
+    background-color: #ffd800;
+    border: 1px solid #ffd800;
+    color: #ffffff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.is-btn-yg2 {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ffd800;
+    color: #ffd800;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.is-txt-link {
+    color: #1155cc;
+    font-size: 11px;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+#joinModal [data-uc-form] .is-input-field input.is-input-control,
+#joinModal [data-uc-form] .is-input-field input[type=email],
+#joinModal [data-uc-form] .is-input-field input[type=file],
+#joinModal [data-uc-form] .is-input-field input[type=password],
+#joinModal [data-uc-form] .is-input-field input[type=search],
+#joinModal [data-uc-form] .is-input-field input[type=text],
+#joinModal [data-uc-form] .is-input-field select,
+#joinModal [data-uc-form] .is-input-field textarea {
+    background-color: #eeeeee;
+}
+
+#joinModal .is-input-field input[type=checkbox]+span,
+#joinModal .is-input-field input[type=radio]+span {
+    margin-right: 9px;
+    vertical-align: middle;
+}
+
+.is-input-field .is-chk-lab input[type=radio]+span {
+    background-position: -216px 0;
+}
+
+.is-input-field .is-chk-lab input[type=checkbox]+span,
+.is-input-field .is-chk-lab input[type=radio]+span {
+    background-image: url(../images/icon/form/square/yellow.png);
+}
+
+@media screen and (max-width: 991px) {
+    header .nav {
+        padding-top: 0;
+    }
+
+    header .nav ul li {
+        margin-right: 5px;
+    }
+
+    header .nav .mypage {
+        margin-left: 15px;
+    }
+
+    header .nav .is-txt-right {
+        margin-bottom: 15px;
+    }
+
+    .is-col-lg6:first-child {
+        margin-bottom: 20px;
+    }
+}
+

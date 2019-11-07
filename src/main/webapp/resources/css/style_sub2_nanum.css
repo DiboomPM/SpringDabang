@@ -1,0 +1,97 @@
+.section.table-wrap table {
+    width: 100%; margin-top: 64px; border: 1px solid #e7e7e7;
+}
+.section.table-wrap table caption {
+    color: #555; font-size: 18px; height: 50px; line-height: 50px;
+    border: 1px solid #e7e7e7; border-bottom: none;
+}
+.section.table-wrap table input {
+    width: 660px; height: 37px;
+}
+.section.table-wrap table tr {
+    height: 53px; border-bottom: 1px solid #fff;
+}
+.section.table-wrap table tr:nth-child(1) {
+    border-top: 1px solid #aeaeae;
+}
+.section.table-wrap table tr:nth-child(1) th {
+    padding-top: 15px;
+}
+.section.table-wrap table tr:nth-child(1) td {
+    padding-top: 15px;
+}
+.section.table-wrap table tr:nth-child(2) th {
+    padding-top: 15px;
+}
+.section.table-wrap table tr:nth-child(2) td {
+    padding-top: 15px;
+}
+.section.table-wrap table tr:nth-child(3) {
+    border-bottom: 1px solid #e7e7e7; height: 60px;
+}
+.section.table-wrap table tr:nth-child(3) th {
+    padding-top: 0;
+}
+.section.table-wrap table tr:nth-child(3) td {
+    padding-top: 0;
+}
+.section.table-wrap table tr th {
+    padding-top: 10px; width: 120px;
+    border-right: 1px solid #e7e7e7; background: #ededed;
+    color: #555; font-size: 14px; border-bottom: 1px solid #ededed;
+}
+.section.table-wrap table tr td {
+    padding-left: 16px; padding-top: 10px;
+}
+
+.section.table-wrap2 table tr:nth-child(1) {
+    border-top: 1px solid #aeaeae;
+}
+.section.table-wrap2 table {
+    width: 100%; margin-top: 64px; margin-bottom: 40px; border: 1px solid #e7e7e7;
+}
+.section.table-wrap2 table caption {
+    color: #555; font-size: 18px; height: 50px; line-height: 50px;
+    border: 1px solid #e7e7e7; border-bottom: none;
+}
+.section.table-wrap2 table td {
+    height: 313px;
+}
+.section.table-wrap2 table td button {
+    cursor: pointer;
+    color: #fff; font-size: 16px; line-height: 30px;
+    width: 96px; height: 30px; display: block; margin: 16px auto 0;
+    background: #554500; border-radius: 6px; border: none; box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+.section.table-wrap2 table div {
+    padding-top: 120px; background: #ededed url(../images/sub_2_nanum/icon.png) no-repeat center 42px;
+    width: 756px; height: 199px; margin: 0 auto;
+}
+.section.table-wrap2 table div p {
+    font-size: 14px; color: #555; text-align: center;
+}
+.section.table-wrap2 table div p:nth-child(2) {
+    color: red;
+}
+
+.check-wrap {
+    width: 315px;
+    margin: 0 auto; position: relative;
+}
+.check-wrap input {
+    position: absolute; top: 6px; left: 3px; cursor: pointer;
+}
+.check-wrap label {
+    font-size: 14px; color: #555; padding-left: 20px;
+}
+.check-wrap button {
+    width: 96px; cursor: pointer; box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    margin-top: 60px; background: #ffd800; border: none; font-size: 15px; color: #555; line-height: 30px; text-align: center; border-radius: 6px;
+}
+.check-wrap button:nth-of-type(1) {
+    margin-right: 46px;
+}
+.check-wrap .btn-wrap {
+    margin: 0 auto;
+}
+

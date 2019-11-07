@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.sist.model.ShareeDAO">
+	<select id="list" resultType="com.sist.model.ShareeDTO"> <!-- 이름이 list이고, 리턴은 BOARDDTO 타입으로  -->
+		select * from sharee order by s_no desc	
+	</select>
+	
+	<insert id="add" parameterType="com.sist.model.ShareeDTO">
+		insert into sharee values(sharee_SEQ.nextval, #{s_title}, #{s_cont}, #{s_memo},'작성자', sysdate, default, sharee_SEQ.currval, 0, 0, #{s_src})	
+	</insert>
+	
+  	<update id="count" parameterType="int">
+  		update board set board_hit = board_hit + 1 where board_no = #{no}
+  	</update>
+  	
+  	<select id="cont" parameterType="int" resultType="com.sist.model.ShareeDTO">
+  		select * from sharee where s_no = #{s_no}
+  	</select>
+  	
+  	<!-- <insert id="c_add" parameterType="com.sist.model.CommentsDTO">
+		insert into comments values(comments_SEQ.nextval, #{s_no}, '작성자', #{c_cont}, sysdate, comments_SEQ.currval, 0, 0)	
+	</insert>
+  	
+  	<delete id="c_delete" parameterType="int">
+  		delete from comments where c_no = #{c_no}
+  	</delete>
+  	
+  	<select id="c_list" parameterType="int" resultType="com.sist.model.CommentsDTO"> 이름이 list이고, 리턴은 BOARDDTO 타입으로 
+		select * from comments where s_no=#{s_no} order by c_no	
+	</select>
+  	<update id="c_update" parameterType="com.sist.model.ShareeDTO">
+  		update comments set  c_date = sysdate, c_cont = #{c_cont} where c_no = #{c_no} 
+  	</update>
+  
+
+ -->  	
+  	<select id="title" parameterType="String" resultType="com.sist.model.ShareeDTO">
+  		select * from board where board_title like '%'||#{name}||'%' order by board_no desc
+  	</select>
+  	<select id="content" parameterType="String" resultType="com.sist.model.ShareeDTO">
+  		select * from board where board_cont like '%'||#{name}||'%' order by board_no desc
+  	</select>
+  	<select id="title_cont" parameterType="String" resultType="com.sist.model.ShareeDTO">
+  		select * from board where board_title like '%'||#{name}||'%' or board_cont like '%'||#{name}||'%' order by board_no desc
+  	</select>
+  	<select id="writer" parameterType="String" resultType="com.sist.model.ShareeDTO">
+  		select * from board where board_writer like '%'||#{name}||'%' order by board_no desc
+  	</select>
+  	
+</mapper>

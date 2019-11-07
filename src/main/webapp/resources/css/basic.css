@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/*@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);*/
+/*@import url(//cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);*/
+.nanumgothic * { font-family: 'Nanum Gothic', sans-serif; }
+
+
+
+/**********초기화값**********/
+body, h1, h2, h3,h4, p, ul, dl, dd{
+    margin: 0;
+    padding: 0;
+    font-family: "NanumSquare";
+}
+ul li{ list-style: none; }
+a{ text-decoration: none;}
+hr {display: none;}
+.hidden{ position: absolute; left: -9999px;}
+address { font-style:normal; line-height: 30px;}
+small { font-size: 1em;}
+img {border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display:block; }
+table{
+  border-collapse: collapse;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.clear{
+  clear: both;
+}
+.wrap{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content_wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header_wrap{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+    height:68px;
+    position: relative;
+}
+.col-1 {width: 8.33%; float:left; box-sizing: border-box;}
+.col-2 {width: 16.66%; float:left; box-sizing: border-box;}
+.col-3 {width: 25%; float:left; box-sizing: border-box;}
+.col-4 {width: 33.33%; float:left; box-sizing: border-box;}
+.col-5 {width: 41.66%; float:left; box-sizing: border-box;}
+.col-6 {width: 50%; float:left; box-sizing: border-box;}
+.col-7 {width: 58.33%; float:left; box-sizing: border-box;}
+.col-8 {width: 66.66%; float:left; box-sizing: border-box;}
+.col-9 {width: 75%; float:left; box-sizing: border-box;}
+.col-10 {width: 83.33%; float:left; box-sizing: border-box;}
+.col-11 {width: 91.66%; float:left; box-sizing: border-box;}
+.col-12 {width: 100%; float:left; box-sizing: border-box;}
+
+@media all and (max-width:640px) {
+    body,a{
+        font-size: 14px;
+    }
+}
+
+#loginModal [data-uc-panel],
+#joinModal [data-uc-panel],
+#joinModal1 [data-uc-panel] {
+    border-color: #7c7b7b;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+#loginModal [data-uc-panel] [class*=is-panel-],
+#joinModal [data-uc-panel] [class*=is-panel-] {
+    padding: 40px 80px;
+
+}
+
+#loginModal[data-uc-modal] .is-modal-dialog {
+    position: absolute;
+    max-width: 780px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    margin-left: -380px;
+    margin-top: -170px;
+}
+
+#joinModal1[data-uc-modal] .is-modal-dialog {
+    max-width: 600px;
+}
+
+#joinModal[data-uc-modal] .is-modal-dialog {
+    max-width: 730px;
+}
+
+.login_title{
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.is-btn-yg1 {
+    display: block;
+    width: 100%;
+    background-color: #ffd800;
+    border: 1px solid #ffd800;
+    color: #ffffff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.is-btn-yg2 {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ffd800;
+    color: #ffd800;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.is-txt-link {
+    color: #1155cc;
+    font-size: 11px;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+
+.logout{
+  background: none;
+  display: block;
+  text-align: center;
+  border: 0px solid #ffd800;
+  padding: 5px 5px;
+  outline: none;
+  color: white;
+  border-radius: 20px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.logout:hover{
+  background: #FFFFFF;
+  color: #ffd800;
+}
+
+
+
+#joinModal1 b.title{display: block; font-size: 36px; font-weight: bold; margin-bottom: 70px; text-align: center;}
+#joinModal1 .inner_box{padding: 25px;}
+
+.join .inner_box .agree_all{text-align: center; font-size: 18px !important; margin-bottom: 45px;}
+.join .box dt{display: block; position: relative}
+.join .box dt{font-size: 18px; padding-left: 5px; box-sizing: border-box;}
+.join .box dt b{font-weight: normal; position: absolute; right: 0; top: 2px;}
+.join .box dd{width: 100%; margin-top: 15px;}
+.join .box dd textarea{width: 100%; overflow-y: auto; border: 1px solid #929090; border-radius: 5px; height: 180px; box-sizing: border-box; padding: 10px; font-size:14px; font-family: "NanumSquare"; line-height: 1.4;}
+.join .box1{margin-bottom: 40px;}
+.join .box3{text-align: center; margin-top: 40px;}
+.join  label{font-size: 18px !important;}
+.join .box3 p{margin-bottom: 15px;}
+
+.join .btn_submit{display: block; width: 400px; height: 51px; line-height: 51px; color: white; border: 0; background: #ffd800; text-align: center; font-size: 17px; border-radius: 5px; margin: 0 auto; margin-top: 50px; cursor: pointer;}
